@@ -1,0 +1,52 @@
+/**
+ * Estilos de tipografía Básica
+ */
+body {
+  font-family:$open-sans;
+    font-weight: $regular;
+    font-size: $x-small;
+    color:$raisin-black;
+    line-height: 1.5rem;
+  /* font: normal 125% / 1.4 $text-font-stack; */
+}
+h1{
+  font-family: $open-sans;
+  font-weight: $bold;  
+  font-size: $xxxxx-large;
+  color:$raisin-black;
+  line-height: 4rem;
+}
+
+h2{
+    font-family: $open-sans;
+    font-weight: $bold;  
+    font-size: $xxx-large;
+    color:$raisin-black;
+  }
+
+h3{
+    font-family: $open-sans;
+    font-weight: $bold;  
+    font-size: $x-large;
+    color:$raisin-black;
+}
+
+h4{
+    font-family: $open-sans;
+    font-weight: $regular;  
+    font-size: $x-large;
+    color:$raisin-black;
+}
+span{
+  font-family: $raleway;
+  font-weight: $bold;  
+}
+/* p{
+    font-family:$open-sans;
+    font-weight: $regular;
+    font-size: $x-small;
+    color:$raisin-black;
+    line-height: 1.5rem;
+} */
+
+

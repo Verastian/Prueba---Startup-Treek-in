@@ -1,0 +1,115 @@
+.main__site{
+    max-width: $contenido-desborde ; 
+    margin:auto;
+    padding:0 -5rem;
+}
+.main__grafic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3rem;
+    & h2 {
+        text-align: center;
+        padding: 3rem 0 6rem 0;
+    }
+}
+.main__img {
+    display: flex;
+    justify-content: center;
+}
+.main__price {
+    padding-top: 3rem;
+    height: fit-content;
+} 
+.main__bg-img {
+    background-image: url("../img/bg-price.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    & h2 {
+        padding-top: 12rem;
+        color: $platinum;
+    }
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h3 {
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+.main__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    @include respond-to("bp-md") {
+        & {
+            flex-direction: row;
+            /* justify-content:center; */
+            align-items: flex-start;
+        }
+    }
+}
+.cards__main{
+    padding: 1rem;
+}
+.main__cards-one,
+.main__cards-two {
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 $raisin-black;
+    transition: 0.3s;
+    padding: 1rem;
+    margin: 3rem;
+    max-width: 80%;
+    flex: 1 0 auto;//ajusta el contenedor hijo en un ancho total o el fijado arriba
+    
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 $raisin-black;
+    }
+    @include respond-to("bp-md") {
+        & {
+            max-width: 50%;
+        }
+    }
+}
+/* 
+ajusta contenedor padre al contenedor hijo
+.ajustar{ 
+    clear:both;
+    }  */
+.card__head li{
+    text-align:start;
+}
+.pad_aux{
+    padding-bottom: 6.94rem;
+}
+.card__btn button{
+    padding: 1rem;
+    width: 100%;
+
+    @include respond-to("bp-md"){
+        &{
+            padding: 1rem;
+            width: 100%;
+        }
+    }
+}
+.card__head{
+
+    & h3 {
+        text-align: start;
+    }
+
+    & ul li {
+        padding-bottom: .8rem;
+    }
+}

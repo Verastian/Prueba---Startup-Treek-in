@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+button{
+ 
+  
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  font-size: $medium;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all .5s ease;
+}
+li{
+  text-align: center;
+  font-size: $medium;
+}
+
+.btn-1 {
+  padding: 0.5rem;
+  @include btn-Borde(0px, 1, $ball-blue);
+  @include btn-Hover($blue-lagoon);
+  @include btn-focus($lavender-gray);
+  @include btn-Text($white, $onyx);
+  
+}
+.btn-2 {
+  padding: 0.5rem 1rem;
+  @include btn-Borde(0px, 1, $ball-blue);
+  @include btn-Hover($blue-lagoon);
+  @include btn-focus($lavender-gray);
+  @include btn-Text($white, $onyx);
+  
+}

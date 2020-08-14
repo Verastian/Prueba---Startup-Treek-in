@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// Clases de ayuda
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+ Contenedores principales
+ * 1. Hacer el contenedor de ancho completo con un ancho máximo
+ * 2. Centrarlo en la ventana gráfica
+ * 3. Deje algo de espacio en los bordes, especialmente valioso en pantallas pequeñas
+ */
+.container {
+  max-width: $max-contenido; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 1rem; /* 3 */
+  padding-right: 1rem; /* 3 */
+  width: 100%; /* 1 */
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  margin: 0;
+}
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  /*específico para MacOS con Chrome. */
+  &:focus {
+    outline: none;
+    box-shadow: none;
+   
+  }
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// 1. ABSTRACTS
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2.VENDORS
+/* @import */
+  
+
+// 3. BASE
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers',
+  'base/keyframes';
+
+// 4. LAYOUT
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/grid',
+  'layout/main-princ';
+
+// 5. COMPONENTS
+@import
+  'components/button',
+  'components/carousel',
+  'components/dropdown',
+  'components/navbar';
+
+// 6. PAGES
+@import
+  'pages/home';
+
+// 7. THEMES
+/* @import */
+  

@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer__site{
+    max-width: $contenido-desborde ; 
+    margin:auto;
+}
+.footer__content {
+    background-color: $raisin-black;
+    padding: 2rem 0;
+}   
+.footer__navbar{
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+
+    @include respond-to("bp-md"){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.footer__nav a{
+    &:not(:first-child) {padding-left: 3rem;}
+
+    @include respond-to("bp-md"){
+        padding-left: 1rem;
+    }
+    &:hover{
+        color:$ball-blue ;
+    }
+}
+.footer__copyright{
+    padding: 1rem 0;
+    @include respond-to("bp-md"){
+        padding-right: 1rem;
+    }
+    &:hover{
+        color:$ball-blue ;
+    }
+    
+}

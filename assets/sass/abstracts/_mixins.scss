@@ -1,0 +1,72 @@
+///Administrador de puntos de quiebre responsivo
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+  
+    @if $raw-query {
+      $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+  
+      @media #{$query} {
+        @content;
+      }
+    } @else {
+      @error 'No value found for `#{$breakpoint}`. '
+             + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+  }
+  ///Generador de estilos para botones
+  @mixin crearBorde($valor_radio, $color_fondo) {
+    background: $color_fondo;
+    border-radius: $valor_radio;
+    -webkit-border-radius: $valor_radio;
+    -moz-border-radius: $valor_radio;
+    -o-border-radius: $valor_radio;
+  }
+  @mixin btn-Borde($valor_radio, $codigo_estilo, $color: orange) {
+    @if $codigo_estilo == 1 {
+      @include crearBorde($valor_radio, $color);
+    }
+  
+    @if $codigo_estilo == 2 {
+      $temp: $valor_radio/2 $valor_radio $valor_radio/2 $valor_radio;
+      @include crearBorde($temp, $color);
+    }
+  
+    @if $codigo_estilo == 3 {
+      $temp: $valor_radio $valor_radio/2 $valor_radio $valor_radio/2;
+      @include crearBorde($temp, $color);
+    }
+  
+    @if $codigo_estilo == 4 {
+      $temp: $valor_radio * 2 0 $valor_radio * 3 0;
+      @include crearBorde($temp, $color);
+    }
+  }
+  
+  @mixin btn-Hover($bg_fondo) {
+    &:hover {
+      border-color: darken($bg_fondo, 50%);
+      background-color: darken($bg_fondo, 10%);
+      /* color: lighten($bg_fondo, 20%); */
+    }
+  }
+  @mixin btn-focus($bg_focus) {
+    &:focus {
+      border-color: darken($bg_focus, 50%);
+      background-color: darken($bg_focus, 10%);
+      /* color: lighten($bg_fondo, 20%); */
+    }
+  }
+  
+  @mixin btn-Text ($color_txt, $txt_hover) {
+    color: $color_txt;
+    text-decoration: none;
+    cursor: pointer;
+  
+    &:hover {
+      color: lighten($txt_hover, 20%);
+    }
+  }
+  

@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header__site{
+    max-width: $contenido-desborde ; /* 1 */
+    margin:auto;
+    padding:0 -5rem;
+}
+.header__navbar {
+    display: flex;
+    padding: 2rem 2rem;
+    & i {
+        font-size:$xxx-large;
+    }
+    @include respond-to("bp-md"){
+        padding: 0;
+    }
+}
+.header__logo {
+    flex: 0 0 5%;
+    & {
+        display: flex;
+        align-items: center;
+    }
+}
+.navbar {
+    flex: 0 0 95%;
+}
+
+.header__img {
+    /* margin: 0 -3rem 0 -3rem; */
+}
+.header__img object{
+    /* width:110%; */
+}
+/* .header__txt {
+   
+} */
+@include respond-to("bp-md") {
+    .header__img {
+        position: relative;
+       /*  padding-top: 2rem; */
+    }
+    .header__txt {
+        position: absolute;
+        padding-top: 2rem;
+        text-align: center;
+        top:25vh;
+        max-width: 40vw;
+        @include respond-to("bp-md"){
+            &{
+                top:20vh;
+                text-align:start;
+                padding-top: 0;
+            }
+        }
+        @include respond-to("bp-lg"){
+            &{
+                top:15vh;
+            }
+        }
+        @include respond-to("bp-xl"){
+            &{
+                top:10vh;
+            }
+        }
+    }
+}
+@include respond-to("bp-xl") {
+   
+    .header__txt {
+            max-width: 20vw;
+    }
+}
